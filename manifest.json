@@ -1,0 +1,26 @@
+{
+  "name": "MeFreeDium",
+  "description": "Hacky extension to access/read premium medium content for free!!!",
+  "version": "2.0", 
+  "manifest_version": 3,
+
+  "action": {
+    "default_title": "MeFreeDium Incognito" 
+  },
+
+  "background":{
+    "matches": ["<all_urls>"],
+    "service_worker": "Background.js"
+  },
+
+  "content_scripts": [
+   {
+     "matches": ["<all_urls>"],
+     "js": ["jquery.js","contentScript.js"]
+   }
+ ],
+  "permissions": [
+    "scripting"
+  ]
+  
+}
